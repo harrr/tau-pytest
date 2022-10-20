@@ -5,7 +5,7 @@ class Accumulator:
 
     @property
     def count(self):
-        return self.count
+        return self._count
 
     def add(self, more = 1):
-        self._count += 1
+        self._count += more
