@@ -18,6 +18,7 @@ def test_accumulator_add_one():
     accum.add()
     assert accum.count == 1
 
+@pytest.mark.fixtured
 def test_accumulator_add_one_fixture(accum):
     accum.add()
     assert accum.count == 1
@@ -27,6 +28,7 @@ def test_accumulator_add_three():
     accum.add(3)
     assert accum.count == 3
 
+@pytest.mark.fixtured
 def test_accumulator_add_three_fixture(accum):
     accum.add(3)
     assert accum.count == 3
@@ -36,6 +38,7 @@ def test_accumulator_cannot_set_count_directly():
     with pytest.raises(AttributeError, match="can't set attribute") as e:
         accum.count = 10
 
+@pytest.mark.fixtured
 def test_accumulator_cannot_set_count_directly_fixture(accum):
     with pytest.raises(AttributeError, match="can't set attribute") as e:
         accum.count = 10
